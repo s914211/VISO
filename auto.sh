@@ -35,17 +35,6 @@ python som_to_ghsom.py $line_num temp3 > somtoolbox/$4.in
 
 rm temp3
 
-# if [ ! -d "somtoolbox/output/" ]; then
-#     mkdir somtoolbox/output
-# fi
-#
-# if [ ! -d "somtoolbox/output/$4" ]; then
-#     mkdir somtoolbox/output/$4
-# else
-#     echo You have the same project name! Change it and try again!
-#     exit
-# fi
-
 python create_prop_file.py $4.in $4 > somtoolbox/$4.prop
 
 ./somtoolbox/somtoolbox.sh GHSOM somtoolbox/$4.prop -h --skipDWM

@@ -38,7 +38,6 @@ if __name__ == '__main__':
     labelList = []
     allapicallList = []
 
-    # path, dirs, files = os.walk("/home/tommy/project/strace/strace_serial/").next()
     path, dirs, files = os.walk(sys.argv[1]).next()
     for serialFile in files:
         pattern = r'[a-zA-Z0-9]+'
